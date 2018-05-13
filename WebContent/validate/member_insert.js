@@ -1,0 +1,34 @@
+$(function(){
+    $("#insertForm").validate({
+        debug:true,
+        submitHandler:function(form){
+            form.submit(); // 表示采用手工提交
+        },
+        rules:{
+            mid:{
+                required:true
+            },
+            name:{
+                required:true
+            },
+            age:{
+                required:true,
+                digits:true,
+                number:true
+            },
+            phone:{
+                required:true,
+                digits:true,
+                number:true,
+                rangelength:[11,11]
+            },
+            note:{
+                required:true,
+               // rangelength:[3,12]
+            },
+            retday:{
+            	 required:true,
+            }
+        }
+    })
+});
